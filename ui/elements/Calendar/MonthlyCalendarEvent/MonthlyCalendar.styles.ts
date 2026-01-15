@@ -1,11 +1,11 @@
 import styled, { css } from 'styled-components';
 
 import {
-    MonthlyCalendarEventProps,
+    StyledMonthlyCalendarEventProps,
     StyledMonthlyCalendarEventTextProps,
 } from './types';
 
-export const StyledMonthlyCalendarEvent = styled.div<MonthlyCalendarEventProps>`
+export const StyledMonthlyCalendarEvent = styled.div<StyledMonthlyCalendarEventProps>`
     cursor: pointer;
     box-sizing: border-box;
     font-family: var(--font-family, 'Mona Sans');
@@ -19,8 +19,8 @@ export const StyledMonthlyCalendarEvent = styled.div<MonthlyCalendarEventProps>`
     height: ${({ height }) => height || '16px'};
     padding: 2px;
 
-    ${({ isActive, width, height }) =>
-        isActive &&
+    ${({ $isActive, width, height }) =>
+        $isActive &&
         css`
             border: 2px solid var(--text-emphasis-white-default, #ffffff);
             box-shadow: 0px 4px 32px var(--spacing-0px, 0px) rgba(0, 0, 0, 0.32);

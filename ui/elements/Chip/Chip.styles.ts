@@ -31,29 +31,29 @@ export const StyledChipDiv = styled.div<StyledChip>`
         css`
             ${CHIP_FONT_SIZE_MAPPING[size]}
         `}
-    ${({ hasBorder, borderColor }) =>
-        hasBorder &&
+    ${({ $hasBorder, $borderColor }) =>
+        $hasBorder &&
         css`
             border: 1px solid;
-            border-color: ${borderColor};
+            border-color: ${$borderColor};
         `}
-    ${({ textColor }) =>
-        textColor &&
+    ${({ $textColor }) =>
+        $textColor &&
         css`
-            color: ${textColor};
+            color: ${$textColor};
         `}
-    ${({ backgroundColor }) =>
-        backgroundColor &&
+    ${({ $backgroundColor }) =>
+        $backgroundColor &&
         css`
-            background: ${backgroundColor};
+            background: ${$backgroundColor};
         `}
-    ${({ rounded }) =>
-        rounded &&
+    ${({ $rounded }) =>
+        $rounded &&
         css`
             border-radius: 100px;
         `}
-    ${({ iconPosition }) =>
-        iconPosition === 'right' &&
+    ${({ $iconPosition }) =>
+        $iconPosition === 'right' &&
         css`
             flex-direction: row-reverse;
         `}

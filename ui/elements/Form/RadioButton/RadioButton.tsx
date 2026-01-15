@@ -55,8 +55,8 @@ const RadioButton = (props: RadioButtonProps) => {
                 {label && (
                     <StyledRadioButtonLabel
                         name={`radio-button-${id}`}
-                        isRequired={isRequired}
-                        isDisabled={isDisabled}
+                        $isRequired={isRequired}
+                        $isDisabled={isDisabled}
                         $size={size}
                         color={color === 'brand' ? 'primary' : color}
                     >

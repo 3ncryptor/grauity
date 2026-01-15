@@ -53,7 +53,15 @@ export interface MonthlyCalendarEventProps extends StyledDivProps {
      * Whether the calendar event is active.
      * @default false
      */
-    isActive?: boolean;
+    $isActive?: boolean;
+}
+
+export interface StyledMonthlyCalendarEventProps {
+    backgroundColor?: string;
+    borderRadius?: string;
+    width?: string;
+    height?: string;
+    $isActive?: boolean;
 }
 
 export interface StyledMonthlyCalendarEventTextProps extends StyledDivProps {

@@ -38,8 +38,8 @@ export const StyledButton = styled.button<ButtonComponentProps>`
         cursor: not-allowed;
     }
 
-    ${({ size, isIconButton }) => {
-        if (!isIconButton) {
+    ${({ size, $isIconButton }) => {
+        if (!$isIconButton) {
             return css`
                 ${BUTTON_SIZE_STYLES_MAPPING[size]}
             `;
@@ -50,20 +50,20 @@ export const StyledButton = styled.button<ButtonComponentProps>`
         `;
     }}
 
-    ${({ fullWidth }) =>
-        fullWidth &&
+    ${({ $fullWidth }) =>
+        $fullWidth &&
         css`
             width: 100%;
         `}
 
-    ${({ isLoading }) =>
-        isLoading &&
+    ${({ $isLoading }) =>
+        $isLoading &&
         css`
             cursor: progress;
         `}
 
-    ${({ iconPosition }) =>
-        iconPosition === 'right' &&
+    ${({ $iconPosition }) =>
+        $iconPosition === 'right' &&
         css`
             flex-direction: row-reverse;
         `}

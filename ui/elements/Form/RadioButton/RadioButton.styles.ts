@@ -130,8 +130,8 @@ export const StyledRadioButtonLabel = styled(
         `;
     }}
 
-    ${({ isDisabled }: StyledLabelProps) =>
-        isDisabled &&
+    ${({ $isDisabled }: StyledLabelProps) =>
+        $isDisabled &&
         css`
             color: var(--text-emphasis-primary-disabled, #8c95a6);
             cursor: not-allowed;

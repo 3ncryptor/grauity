@@ -276,14 +276,14 @@ export interface ButtonComponentProps extends StyledButtonProps {
     size?: ButtonSizes;
     icon?: string | number;
     iconSize?: string;
-    iconPosition?: 'left' | 'right';
+    $iconPosition?: 'left' | 'right';
     className?: string;
     disabled?: boolean;
-    isLoading?: boolean;
+    $isLoading?: boolean;
     style?: React.CSSProperties;
     onClick?: (e?: any) => void;
-    fullWidth?: boolean;
-    isIconButton?: boolean;
+    $fullWidth?: boolean;
+    $isIconButton?: boolean;
     children?: React.ReactNode;
     ref?: React.Ref<HTMLButtonElement>;
     type?: ButtonTypeAttribute;

@@ -12,11 +12,30 @@ const MonthlyCalendarEvent = forwardRef<
     HTMLDivElement,
     MonthlyCalendarEventProps
 >((props, ref) => {
-    const { eventTime, eventTitle, eventTitleColor, eventTimeColor } = props;
+    const {
+        eventTime,
+        eventTitle,
+        eventTitleColor,
+        eventTimeColor,
+        backgroundColor,
+        borderRadius,
+        width,
+        height,
+        $isActive,
+        ...rest
+    } = props;
     const eventTimeString = get12HourFormatFromDate(eventTime);
 
     return (
-        <StyledMonthlyCalendarEvent {...props} ref={ref}>
+        <StyledMonthlyCalendarEvent
+            ref={ref}
+            backgroundColor={backgroundColor}
+            borderRadius={borderRadius}
+            width={width}
+            height={height}
+            $isActive={$isActive}
+            {...rest}
+        >
             <StyledMonthlyCalendarEventText color={eventTimeColor}>
                 {eventTimeString}
             </StyledMonthlyCalendarEventText>

@@ -8,6 +8,7 @@ export const Label = (props: LabelProps) => {
         name,
         color = 'secondary',
         isRequired,
+        isDisabled,
         children,
         className,
         ...rest
@@ -16,7 +17,8 @@ export const Label = (props: LabelProps) => {
     return (
         <StyledLabel
             htmlFor={name}
-            isRequired={isRequired}
+            $isRequired={isRequired}
+            $isDisabled={isDisabled}
             className={className}
             color={color}
             {...rest}

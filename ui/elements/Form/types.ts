@@ -18,6 +18,16 @@ export interface LabelProps extends StyledLabelProps {
     color?: FormTextColors;
 
     /**
+     * Whether the field is required. Adds an asterisk to the label.
+     */
+    isRequired?: boolean;
+
+    /**
+     * Whether the field is disabled. Changes the label color.
+     */
+    isDisabled?: boolean;
+
+    /**
      * The content of the label.
      */
     children: React.ReactNode;

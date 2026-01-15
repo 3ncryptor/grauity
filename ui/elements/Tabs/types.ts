@@ -3,7 +3,7 @@ import React from 'react';
 import { StyledDivProps } from '../../../common/types';
 
 export interface StyledTabContainerProps extends StyledDivProps {
-    backgroundColor?: string;
+    $backgroundColor?: string;
 }
 
 export interface StyledTextProps extends StyledDivProps {
@@ -18,11 +18,11 @@ export interface StyledTextProps extends StyledDivProps {
 
 export interface StyledTabItemContainerProps
     extends React.HTMLAttributes<HTMLDivElement> {
-    isActive?: boolean;
-    backgroundColor?: string;
-    focusColor?: string;
+    $isActive?: boolean;
+    $backgroundColor?: string;
+    $focusColor?: string;
     color?: string;
-    focusBackgroundColor?: string;
+    $focusBackgroundColor?: string;
 }
 
 export interface TabsProps {

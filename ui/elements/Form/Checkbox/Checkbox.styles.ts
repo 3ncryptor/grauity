@@ -90,8 +90,8 @@ export const StyledCheckboxLabel = styled(Label)`
     letter-spacing: 0.1px;
     cursor: pointer;
 
-    ${({ isDisabled }: StyledLabelProps) =>
-        isDisabled &&
+    ${({ $isDisabled }: StyledLabelProps) =>
+        $isDisabled &&
         css`
             color: var(--text-emphasis-primary-disabled, #8c95a6);
         `};

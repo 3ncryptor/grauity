@@ -19,10 +19,10 @@ export const StyledTabContainer = styled.div<StyledTabContainerProps>`
     background: var(--bg-subtle-secondary-default, #f6f7f9);
     font-family: var(--font-family, 'Mona Sans');
 
-    ${({ backgroundColor }) =>
-        backgroundColor &&
+    ${({ $backgroundColor }) =>
+        $backgroundColor &&
         css`
-            background: ${backgroundColor};
+            background: ${$backgroundColor};
         `}
 `;
 
@@ -38,10 +38,10 @@ export const StyledTabItemContainer = styled.div<StyledTabItemContainerProps>`
     flex: 1;
     color: var(--text-emphasis-primary-default, #16191d);
 
-    ${({ backgroundColor }) =>
-        backgroundColor &&
+    ${({ $backgroundColor }) =>
+        $backgroundColor &&
         css`
-            background: ${backgroundColor};
+            background: ${$backgroundColor};
         `}
 
     ${({ color }) =>
@@ -50,12 +50,12 @@ export const StyledTabItemContainer = styled.div<StyledTabItemContainerProps>`
             color: ${color};
         `}
 
-    ${({ isActive, focusColor, focusBackgroundColor }) =>
-        isActive &&
+    ${({ $isActive, $focusColor, $focusBackgroundColor }) =>
+        $isActive &&
         css`
-            background: ${focusBackgroundColor ||
+            background: ${$focusBackgroundColor ||
             'var(--bg-subtle-primary-default, #ffffff)'};
-            color: ${focusColor ||
+            color: ${$focusColor ||
             'var(--text-emphasis-brand-default, #0673f9)'};
         `}
 `;
